@@ -6,6 +6,8 @@ public class Node {
    // a pointer to a Node object
    Node next;  // pointer
 
+   public CharData cd;
+
   
   
    /** Constructs a node with the given CharData object.
