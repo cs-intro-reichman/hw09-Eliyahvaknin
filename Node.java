@@ -18,7 +18,7 @@ public class Node {
    }
         
    /** Constructs a node with the given CharData object.
-    *  The new node will point to null. */
+    *  The new node will point to null . */
    public Node(CharData cp) {
       this(cp, null);
    }
