@@ -148,7 +148,7 @@ public class LanguageModelTester {
     }
 
 
-    // Test method for the generate() method
+    // Test method for the generate() method.
     public static boolean testGenerate() {
         LanguageModel languageModel = new LanguageModel(7,20);
         languageModel.train("originofspecies.txt");
