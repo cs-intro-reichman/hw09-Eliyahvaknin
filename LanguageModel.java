@@ -16,7 +16,7 @@ public class LanguageModel {
 
     /** Constructs a language model with the given window length and a given
      *  seed value. Generating texts from this model multiple times with the
-     *  same seed value will produce the same random texts. Good for debugging. */
+     *  same seed value will produce the same random texts. Good for debugging.*/
     public LanguageModel(int windowLength, int seed) {
         this.windowLength = windowLength;
         randomGenerator = new Random(seed);
