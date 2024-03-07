@@ -6,7 +6,7 @@
  *  mention the existence of the Node objects). */
 public class List {
 
-    // Points to the first node in this list
+    // Points to the first node in this lisy
     private Node first;
 
     // The number of elements in this list
