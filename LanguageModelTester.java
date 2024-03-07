@@ -39,7 +39,7 @@ public class LanguageModelTester {
         for (int i = 0; i < word.length(); i++) {
             list.update(word.charAt(word.length() - 1 - i));
         }
-        model.calculateProbabilities(list);
+        model.calculator(list);
         
         String resString = "((o 1 0.0625 0.0625) (m 1 0.0625 0.125) (p 1 0.0625 0.1875) (u 1 0.0625 0.25) (t 1 0.0625 0.3125) (r 1 0.0625 0.375) (_ 1 0.0625 0.4375) (s 1 0.0625 0.5) (i 1 0.0625 0.5625) (n 1 0.0625 0.625) (c 3 0.1875 0.8125) (e 3 0.1875 1.0))";
         boolean res = list.toString().equals(resString);
@@ -67,7 +67,7 @@ public class LanguageModelTester {
                 list.update(words[i].charAt(words[i].length() - 1 - j));
             }
             boolean res = true;
-            model.calculateProbabilities(list);
+            model.calculator(list);
             for (int j = 0; j < words[i].length(); j++) {
                 char actual = model.getRandomChar(list);
                 boolean temp = actual == expected[i][j];
@@ -148,7 +148,7 @@ public class LanguageModelTester {
     }
 
 
-    // Test method for the generate() method
+    // Test method for the generate() method.
     public static boolean testGenerate() {
         LanguageModel languageModel = new LanguageModel(7,20);
         languageModel.train("originofspecies.txt");
